@@ -7,7 +7,7 @@ The reasoning behind this approach is simple.  Filtering input before it is save
 == Requirements
 
 * Sanitize >1.1.0 (prior versions had a whitespace issue)
-* Nokogiri >1.3.3
+* Nokogiri >1.4.1
 * RedCloth (for Textile support)
 * ActiveRecord (tested on 2.3.4)
 

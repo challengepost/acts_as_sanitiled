@@ -138,3 +138,11 @@ describe 'Defining fields on an ActiveRecord object' do
     end.should.raise
   end
 end
+
+describe 'acts_as_sanitized' do
+  it "uses default sanitize options if options aren't passed in" do
+    ActsAsSanitiled.default_sanitize_options = { :elements => ['p', 'em', 'strong'] }
+    @publisher = Publisher.new(:name => '<p>King <script></script> George</p>' )
+    @publisher.name.should.equal '<p>King  George</p>'
+  end
+end

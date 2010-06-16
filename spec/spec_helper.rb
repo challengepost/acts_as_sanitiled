@@ -1,9 +1,10 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
+require 'rubygems'
+require 'rails'
 require 'acts_as_sanitiled'
 require 'bacon'
-require 'active_support'
 
 class ActiveRecord
   class Base
@@ -38,6 +39,10 @@ end
 class Author < ActiveRecord::Base
   acts_as_sanitized :name, :elements => ['b','em']
   acts_as_textiled :bio
+end
+
+class Publisher < ActiveRecord::Base
+  acts_as_sanitized :name
 end
 
 Bacon.summary_on_exit

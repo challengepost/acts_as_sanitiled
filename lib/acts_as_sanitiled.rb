@@ -49,7 +49,7 @@ module ActsAsSanitiled #:nodoc: all
 
       raise 'Both textile and sanitize were skipped' if skip_textile && skip_sanitize
 
-      sanitize_options = options.nil? ? ActsAsSanitiled.default_sanitize_options : options
+      sanitize_options = options.nil? || options.empty? ? ActsAsSanitiled.default_sanitize_options : options
       red_cloth_options = attributes.last && attributes.last.is_a?(Array) ? attributes.pop : ActsAsSanitiled.default_redcloth_options
 
       raise 'No attributes were specified to filter' if attributes.empty?

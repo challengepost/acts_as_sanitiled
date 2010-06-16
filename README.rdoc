@@ -9,8 +9,9 @@ This plugin, based on Chris Wanstrath's venerable acts_as_textiled, extends the 
 The officially sanctioned requirements are:
 
 * Sanitize >1.1.0 (prior versions had a whitespace issue)
-* RedCloth >4.1.0
-* ActiveRecord (tested on 2.3.10 and 3.0.9)
+* Nokogiri >1.4.1
+* RedCloth (for Textile support)
+* ActiveRecord (tested on 2.3.4)
 
 However there are a lot of little aberrations in output when you start mixing and matching versions of the various moving parts.  Most recently I am working with REE 1.8.7, Sanitize 2.0.0, RedCloth 4.2.5, and Nokogiri 1.4.4, and I make sure specs pass with that mix.  With other versions things should still work but the output might be slightly different (see known issues)
 

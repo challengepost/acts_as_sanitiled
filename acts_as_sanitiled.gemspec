@@ -43,14 +43,16 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bacon>, [">= 0"])
       s.add_development_dependency(%q<activesupport>, [">= 0"])
     else
-      s.add_dependency(%q<sanitize>, ["< 3.0.0", ">= 1.1.0"])
-      s.add_dependency(%q<RedCloth>, [">= 4.1.0"])
+      s.add_dependency(%q<nokogiri>, ["~> 1.4.1"])
+      s.add_dependency(%q<sanitize>, ["~> 1.1.0"])
+      s.add_dependency(%q<RedCloth>, [">= 0"])
       s.add_dependency(%q<bacon>, [">= 0"])
       s.add_dependency(%q<activesupport>, [">= 0"])
     end
   else
-    s.add_dependency(%q<sanitize>, ["< 3.0.0", ">= 1.1.0"])
-    s.add_dependency(%q<RedCloth>, [">= 4.1.0"])
+    s.add_dependency(%q<nokogiri>, ["~> 1.4.1"])
+    s.add_dependency(%q<sanitize>, ["~> 1.1.0"])
+    s.add_dependency(%q<RedCloth>, [">= 0"])
     s.add_dependency(%q<bacon>, [">= 0"])
     s.add_dependency(%q<activesupport>, [">= 0"])
   end

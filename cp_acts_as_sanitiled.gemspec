@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cp_acts_as_sanitiled}
-  s.version = "1.1.3"
+  s.version = "1.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Gabe da Silveira"]
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "cp_acts_as_sanitiled.gemspec",
+     "lib/cp_acts_as_sanitiled.rb",
      "lib/acts_as_sanitiled.rb",
      "rails/init.rb",
      "spec/sanitiled_spec.rb",

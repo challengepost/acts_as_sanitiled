@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb"
     ".gitignore",
     "cp_acts_as_sanitiled.gemspec"
+    "lib/cp_acts_as_sanitiled.rb"
   ]
   s.homepage = %q{http://github.com/dasil003/acts_as_sanitiled}
   s.require_paths = ["lib"]

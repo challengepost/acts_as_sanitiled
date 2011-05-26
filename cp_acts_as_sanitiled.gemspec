@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{acts_as_sanitiled}
+  s.name = %q{cp_acts_as_sanitiled}
   s.version = "1.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
     "rails/init.rb",
     "spec/sanitiled_spec.rb",
     "spec/spec_helper.rb"
+    ".gitignore",
+    "cp_acts_as_sanitiled.gemspec"
   ]
   s.homepage = %q{http://github.com/dasil003/acts_as_sanitiled}
   s.require_paths = ["lib"]

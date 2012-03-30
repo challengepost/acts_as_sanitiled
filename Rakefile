@@ -2,25 +2,9 @@ require 'rubygems'
 require 'rake'
 
 begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = "acts_as_sanitiled"
-    gem.summary = %Q{Automatically textiles and/or sanitizes ActiveRecord columns}
-    gem.description = %Q{A modernized version of Chris Wansthrath's venerable acts_as_textiled. It automatically textiles and then sanitizes columns to your specification.  Ryan Grove's excellent Sanitize gem with nokogiri provides the backend for speedy and robust filtering of your output in order to: restrict Textile to a subset of HTML, guarantee well-formedness, and of course prevent XSS.}
-    gem.email = "gabe@websaviour.com"
-    gem.homepage = "http://github.com/dasil003/acts_as_sanitiled"
-    gem.authors = ["Gabe da Silveira"]
-
-    gem.add_dependency('nokogiri', '~> 1.4.1')
-    gem.add_dependency('sanitize', '>= 1.1.0')
-    gem.add_dependency('RedCloth')
-
-    gem.add_development_dependency "bacon"
-    gem.add_development_dependency "activesupport"
-  end
-  Jeweler::GemcutterTasks.new
+  require 'bundler/setup'
 rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
 require 'rake/testtask'
@@ -42,6 +26,8 @@ rescue LoadError
     abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
   end
 end
+
+Bundler::GemHelper.install_tasks
 
 task :spec => :check_dependencies
 
